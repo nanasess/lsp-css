@@ -4,7 +4,7 @@
 
 ;; Author: George Pittarelli <g@gjp.cc>
 ;; Version: 1.0
-;; Package-Requires: ((lsp-css "3.0"))
+;; Package-Requires: ((lsp-mode "3.0"))
 ;; Keywords: css less sass lsp
 ;; URL: https://github.com/emacs-lsp/lsp-css
 
@@ -23,8 +23,8 @@
 
 ;;; Commentary:
 
-;; CSS, LESS, and SASS support for lsp-mode using Sourcegraph's
-;; javascript-typescript-langserver server.
+;; CSS, LESS, and SASS support for lsp-mode using VSCode's
+;; vscode-css-langserver server.
 
 ;;; Code:
 
