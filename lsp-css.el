@@ -40,5 +40,17 @@
  lsp-css--get-root
  '("css-languageserver" "--stdio"))
 
+(lsp-define-stdio-client
+ lsp-scss
+ "scss"
+ lsp-css--get-root
+ '("css-languageserver" "--stdio"))
+
+(lsp-define-stdio-client
+ lsp-less
+ "less"
+ lsp-css--get-root
+ '("css-languageserver" "--stdio"))
+
 (provide 'lsp-css)
 ;;; lsp-css.el ends here
