@@ -1,7 +1,7 @@
 lsp-css
 ==============
 
-CSS, LESS, and SASS support for lsp-mode using [vscode-css-languageserver-bin](https://github.com/vscode-langservers/vscode-css-languageserver-bin)
+CSS, LESS, and SCSS/SASS support for lsp-mode using [vscode-css-languageserver-bin](https://github.com/vscode-langservers/vscode-css-languageserver-bin)
 
 ## Installation
 
@@ -24,11 +24,17 @@ Install one of the available packages:
 ### Enabling `lsp-css`
 
 ```emacs-lisp
+(defun my-css-mode-setup ()
+  (when (eq major-mode 'css-mode)
+    ;; Only enable in strictly css-mode, not scss-mode (css-mode-hook
+    ;; fires for scss-mode because scss-mode is derived from css-mode)
+    (lsp-css-enable)))
+
 (require 'lsp-css)
-(add-hook 'css-mode-hook #'lsp-css-enable)
-(add-hook 'less-mode-hook #'lsp-css-enable)
-(add-hook 'sass-mode-hook #'lsp-css-enable)
-(add-hook 'scss-mode-hook #'lsp-css-enable)
+(add-hook 'css-mode-hook #'my-css-mode-setup)
+(add-hook 'less-mode-hook #'lsp-less-enable)
+(add-hook 'sass-mode-hook #'lsp-scss-enable)
+(add-hook 'scss-mode-hook #'lsp-scss-enable)
 ```
 
 You also need
