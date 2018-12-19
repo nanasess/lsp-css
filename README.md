@@ -1,3 +1,32 @@
+# DEPRECATED
+
+You do not need this package anymore! Just use `lsp-mode` directly. Read [the docs](https://github.com/emacs-lsp/lsp-mode/#configuration).
+
+tl;dr:
+
+```
+(package-install 'lsp-mode)
+
+(require 'lsp)
+(require 'lsp-clients)
+
+(add-hook 'less-mode-hook #'lsp)
+(add-hook 'sass-mode-hook #'lsp)
+(add-hook 'scss-mode-hook #'lsp)
+
+;; For dropdown autocomplete:
+;; (package-install 'company)
+;; (package-install 'company-lsp)
+;; (require 'company)
+;; (require 'company-lsp)
+;;
+;; For other fancy UI stuff:
+;; (package-install 'lsp-ui)
+;; (require 'lsp-ui)
+```
+
+
+
 lsp-css
 ==============
 
