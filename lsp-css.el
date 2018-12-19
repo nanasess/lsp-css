@@ -30,26 +30,22 @@
 
 (require 'lsp-mode)
 
-(defconst lsp-css--get-root
-  (lsp-make-traverser #'(lambda (dir)
-                          (directory-files dir nil "package.json"))))
-
 (lsp-define-stdio-client
  lsp-css
  "css"
- lsp-css--get-root
+ nil
  '("css-languageserver" "--stdio"))
 
 (lsp-define-stdio-client
  lsp-scss
  "scss"
- lsp-css--get-root
+ nil
  '("css-languageserver" "--stdio"))
 
 (lsp-define-stdio-client
  lsp-less
  "less"
- lsp-css--get-root
+ nil
  '("css-languageserver" "--stdio"))
 
 (provide 'lsp-css)
